@@ -60,13 +60,6 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ],
-                // children: [
-                //   const Text(
-                //     "data",
-                //     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                //   ),
-                //   Image.asset("images/banner.png", width: 100),
-                // ],
               ),
 
               // Text buku
@@ -113,7 +106,15 @@ class HomePage extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          Image.asset(book.image, width: 64),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              book.image,
+                              width: 64,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                           const SizedBox(width: 10),
                           Expanded(
                             child: Column(
